@@ -1,5 +1,7 @@
 alias mkcd='_(){ mkdir -p "$*"; cd "$*"; }; _'
 
+alias rm='rm -i'
+
 alias g:='grunt'
 alias scon='app/console'
 
