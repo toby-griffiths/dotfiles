@@ -6,7 +6,7 @@ export DOCKER_CERT_PATH=/Users/toby/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 
 # Composer
-export PATH="~/.composer/vendor/bin:$PATH"
+export PATH="$PATH:~/.composer/vendor/bin"
 
 # Digital Ocean
 export DO_TOKEN="0c294d1d59315607d8bd9419adf62aacec684c3fca8cd7e34b43eb7aa5faf8cb"
