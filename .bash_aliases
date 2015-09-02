@@ -2,6 +2,10 @@ alias mkcd='_(){ mkdir -p "$*"; cd "$*"; }; _'
 
 alias rm='rm -i'
 
+# Pushd/Popd
+alias pud='pushd'
+alias pod='popd'
+
 alias g:='grunt'
 alias scon='app/console'
 
