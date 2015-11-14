@@ -4,6 +4,7 @@ protocol = https
 
 [core]
 	excludesfile = /opt/boxen/config/git/gitignore
+	autocrlf = input
 
 [credential]
 helper = /opt/boxen/bin/boxen-git-credential
