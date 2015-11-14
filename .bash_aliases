@@ -21,3 +21,6 @@ alias cdboxen="cd /opt/boxen/repo"
 alias vup="vagrant up"
 alias vssh="vagrant ssh"
 alias vhalt="vagrant halt"
+
+# KeyFIT backup
+alias kfb="ssh root@kf-prod-1 shutdown -P now && sleep 120 && backup_kf.sh && exit"
