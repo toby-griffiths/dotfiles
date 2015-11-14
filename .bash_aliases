@@ -6,8 +6,8 @@ alias rm='rm -i'
 alias cd='pushd'
 alias cdp='popd'
 
-alias g:='grunt'
-alias scon='app/console'
+alias g='grunt'
+alias s='app/console'
 
 # GIT aliases
 alias git-rebase-reset-dates="git filter-branch --env-filter 'GIT_COMMITTER_DATE=$GIT_AUTHOR_DATE; export GIT_COMMITTER_DATE'"
