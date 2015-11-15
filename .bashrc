@@ -18,11 +18,11 @@ export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 # Xdebug on the command line
 export XDEBUG_CONFIG='idekey=session_name remote_host=localhost'
 
-# Grunt autocompletion
-eval "$(grunt --completion=bash)"
-
 export PATH=vendor/bin:$PATH
 export PATH="$NPM_PACKAGES/bin:$PATH"
+
+# Grunt autocompletion
+eval "$(grunt --completion=bash)"
 
 # Aliases
 source ~/.bash_aliases
