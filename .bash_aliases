@@ -1,10 +1,18 @@
 alias mkcd='_(){ mkdir -p "$*"; cd "$*"; }; _'
 
-alias rm='rm -i'
+alias touch-p='_() {
+    if [ $# -lt 1 ]; then
+        echo "Missing argument";
+        return 1;
+    fi
 
-# Pushd/Popd
-alias cd='pushd'
-alias cdp='popd'
+    for f in "$@"; do
+        mkdir -p -- "$(dirname -- "$f")"
+        touch -- "$f"
+    done
+}; _'
+
+alias rm='rm -i'
 
 alias g='grunt'
 alias s='app/console'
