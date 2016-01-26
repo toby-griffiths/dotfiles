@@ -34,3 +34,6 @@ alias vdestroy="vagrant destroy"
 
 # KeyFIT backup
 alias kfb="ssh root@kf-prod-1 shutdown -P now && sleep 120 && backup_kf.sh && exit"
+
+# Speed test alias
+alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
