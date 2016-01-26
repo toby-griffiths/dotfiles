@@ -28,7 +28,9 @@ alias cdboxen="cd /opt/boxen/repo"
 # Vagrant shortcuts
 alias vup="vagrant up"
 alias vssh="vagrant ssh"
+alias vreload="vagrant reload"
 alias vhalt="vagrant halt"
+alias vdestroy="vagrant destroy"
 
 # KeyFIT backup
 alias kfb="ssh root@kf-prod-1 shutdown -P now && sleep 120 && backup_kf.sh && exit"
