@@ -14,7 +14,7 @@ alias touch-p='_() {
 
 alias rm='rm -i'
 
-alias g='grunt'
+alias g='gulp'
 alias s='app/console'
 
 # GIT aliases
