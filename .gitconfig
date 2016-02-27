@@ -3,11 +3,8 @@
 protocol = https
 
 [core]
-	excludesfile = /opt/boxen/config/git/gitignore
+	excludesfile = ~/.gitignore
 	autocrlf = input
-
-[credential]
-helper = /opt/boxen/bin/boxen-git-credential
 [user]
 	name = Toby Griffiths
 	email = toby@cubicmushroom.co.uk
