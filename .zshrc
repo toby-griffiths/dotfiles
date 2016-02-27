@@ -6,5 +6,6 @@ alias cddot="cd $HOME/Dropbox/Development/GitHub/dotfiles"
 # Homebrew path
 export PATH="/usr/local/sbin:$PATH"
 
-# phpenv path
-export PATH=$HOME/.phpenv/bin:$PATH
+# phpenv
+export PATH="$HOME/.phpenv/bin:$PATH"
+eval "$(phpenv init -)"
