@@ -3,6 +3,9 @@ alias ansible-latest="source ~/src/github.com/ansible/ansible/hacking/env-setup 
 # dotfiles
 alias cddot="cd $HOME/Dropbox/Development/GitHub/dotfiles"
 
+# Ansible mac setup
+alias cdmacsetup="cd $HOME/src/github.com/toby-griffiths/mac-dev-playbook"
+
 # Homebrew path
 export PATH="/usr/local/sbin:$PATH"
 
