@@ -1,16 +1,39 @@
-# Zsh autocomplete
+###
+# For information on configuring Zsh see...
+# https://wiki.archlinux.org/index.php/Zsh
+###
+
+
+
+## Zsh autocomplete
 autoload -U compinit promptinit
 compinit
 promptinit
 # This will set the default prompt to the walters theme
 prompt walters
 
-# Autocompletions
+
+## Autocompletions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# dotfiles
+
+## History
+SAVEHIST=100
+HISTFILE=~/.zsh_history
+# To ignore duplicate lines in the history, use the following:
+setopt HIST_IGNORE_DUPS
+
+
+## Key bindings
+
+# File manager key binds (as https://wiki.archlinux.org/index.php/Zsh#File_manager_key_binds)
+# Read up more on this, as not working
+
+
+## dotfiles
 alias cddot="cd $HOME/Dropbox/Development/GitHub/dotfiles"
 
-# Ansible mac setup
+
+## Ansible mac setup
 alias cdmacsetup="cd $HOME/src/github.com/toby-griffiths/mac-dev-playbook"
 alias ansible-latest="source ~/src/github.com/ansible/ansible/hacking/env-setup > /dev/null"
