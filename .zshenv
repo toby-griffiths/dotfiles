@@ -1,5 +1,3 @@
-echo $PATH
-
 # Only allow each path to be added one (-U = unique)
 typeset -U path
 
