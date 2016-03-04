@@ -1,10 +1,8 @@
 # Only allow each path to be added one (-U = unique)
 typeset -U path
 
-path=($path[@] /)
-
 # Add paths
-path=(~/bin $path[@])
+path=($path[@])
 
 # phpenv
 path=($HOME/.phpenv/bin $path[@])
