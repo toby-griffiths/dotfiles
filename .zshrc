@@ -3,7 +3,8 @@
 # https://wiki.archlinux.org/index.php/Zsh
 ###
 
-
+## Autocompletions
+fpath=(/usr/local/share/zsh-completions /usr/local/share/zsh/site-functions $fpath)
 
 ## Zsh autocomplete
 autoload -U compinit promptinit
@@ -11,10 +12,6 @@ compinit
 promptinit
 # This will set the default prompt to the walters theme
 prompt walters
-
-
-## Autocompletions
-fpath=(/usr/local/share/zsh-completions $fpath)
 
 
 ## History
