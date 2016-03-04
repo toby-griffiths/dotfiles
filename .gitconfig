@@ -3,7 +3,7 @@
 protocol = https
 
 [core]
-	excludesfile = /Users/toby/.gitignore
+	excludesfile = ~/.gitignore
 	autocrlf = input
 [user]
 	name = Toby Griffiths
