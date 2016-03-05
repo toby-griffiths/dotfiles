@@ -1,0 +1,12 @@
+###
+# This file contains command aliases common to all shells
+###
+
+alias vup="vagrant up"
+alias vprov="vagrant provision"
+alias vreload="vagrant reload"
+alias vssh="vagrant ssh"
+alias vhalt="vagrant halt"
+alias vkill="vagrant destroy"
+alias vdest="vagrant destroy"
+alias vdestroy="vagrant destroy"

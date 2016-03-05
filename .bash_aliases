@@ -1,3 +1,8 @@
+if [ -f ~/.aliases ]
+then
+    source ~/.aliases
+fi
+
 alias mkcd='_(){ mkdir -p "$*"; cd "$*"; }; _'
 
 alias touch-p='_() {
