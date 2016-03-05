@@ -31,10 +31,15 @@ setopt HIST_IGNORE_DUPS
 alias cddot="cd $HOME/Dropbox/Development/GitHub/dotfiles"
 
 
-## Ansible mac setup
+## Mac setup (absible)
+# Useful aliases
 alias cdmacsetup="cd $HOME/src/github.com/toby-griffiths/mac-dev-playbook"
 alias ansible-latest="source ~/src/github.com/ansible/ansible/hacking/env-setup > /dev/null"
 
+
+## Ansible
+# Don't display using cowsays
+export ANSIBLE_NOCOWS=true
 
 ## Aliases
 if [ -f ~/.zsh_aliases ]
