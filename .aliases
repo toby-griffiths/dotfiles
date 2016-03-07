@@ -2,6 +2,8 @@
 # This file contains command aliases common to all shells
 ###
 
+## Vagrant
+
 alias vup="vagrant up"
 alias vprov="vagrant provision"
 alias vreload="vagrant reload"
@@ -10,6 +12,12 @@ alias vhalt="vagrant halt"
 alias vkill="vagrant destroy"
 alias vdest="vagrant destroy"
 alias vdestroy="vagrant destroy"
+
+
+
+## Symfony
+
+alias s="app/console"
 
 
 
@@ -23,3 +31,10 @@ alias cddot="cd $HOME/Dropbox/Development/GitHub/dotfiles"
 
 alias cdmacsetup="cd $HOME/src/github.com/toby-griffiths/mac-dev-playbook"
 alias ansible-latest="source ~/src/github.com/ansible/ansible/hacking/env-setup > /dev/null"
+
+
+
+## Xdebug
+
+alias xden="export XDEBUG_CONFIG="idekey=phpstorm"
+alias xddis="unset XDEBUG_CONFIG"
