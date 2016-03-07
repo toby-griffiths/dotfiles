@@ -10,3 +10,16 @@ alias vhalt="vagrant halt"
 alias vkill="vagrant destroy"
 alias vdest="vagrant destroy"
 alias vdestroy="vagrant destroy"
+
+
+
+## dotfileso
+
+alias cddot="cd $HOME/Dropbox/Development/GitHub/dotfiles"
+
+
+
+## Mac setup (absible)
+
+alias cdmacsetup="cd $HOME/src/github.com/toby-griffiths/mac-dev-playbook"
+alias ansible-latest="source ~/src/github.com/ansible/ansible/hacking/env-setup > /dev/null"
