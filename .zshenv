@@ -6,8 +6,12 @@ path=($path[@])
 
 # phpenv
 path=($HOME/.phpenv/bin $path[@])
-eval "$(phpenv init -)"
+if type "phpenv" > /dev/null ; then
+    eval "$(phpenv init -)"
+fi
 
 # rbenv
 path=($HOME/.rbenv/bin $path[@])
-eval "$(rbenv init -)"
+if type "rbenv" > /dev/null ; then
+    eval "$(rbenv init -)"
+fi
