@@ -8,7 +8,7 @@ fpath=(/usr/local/share/zsh-completions /usr/local/share/zsh/site-functions $fpa
 
 ## Zsh autocomplete
 autoload -U compinit promptinit
-compinit
+compinit -u
 promptinit
 # This will set the default prompt to the walters theme
 prompt walters
