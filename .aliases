@@ -36,5 +36,5 @@ alias ansible-latest="source ~/src/github.com/ansible/ansible/hacking/env-setup 
 
 ## Xdebug
 
-alias xden="export XDEBUG_CONFIG=\"idekey=phpstorm\""
-alias xddis="unset XDEBUG_CONFIG"
+alias xden="export XDEBUG_CONFIG=\"idekey=phpstorm\" ; pushd /usr/local/etc/php/5.6/conf.d > /dev/null ; if [ -f ext-xdebug.ini.disabled ] ; then ;  mv ext-xdebug.ini.disabled ext-xdebug.ini ; fi ; popd > /dev/null"
+alias xddis="unset XDEBUG_CONFIG ; pushd /usr/local/etc/php/5.6/conf.d > /dev/null ; if [ -f ext-xdebug.ini ] ; then ; mv ext-xdebug.ini ext-xdebug.ini.disabled ; fi ; popd > /dev/null"
