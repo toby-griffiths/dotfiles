@@ -14,3 +14,4 @@ ehthumbs.db
 /tags
 /.bundle/
 /.idea/workspace.xml
+.vagrant
