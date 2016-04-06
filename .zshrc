@@ -37,14 +37,6 @@ then
     source ~/.zsh_aliases
 fi
 
-
-
-
-
-
-
-
-
 ###
 # Stuff added by Oh-my-zsh insstall script
 ###
@@ -100,6 +92,6 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew git git-flow github osx symfony2)
+plugins=(autojump aws bower brew chucknorris composer common-aliases docker encode64 git gitfast git-extras git-flow github gulp osx symfony2)
 
 source $ZSH/oh-my-zsh.sh
