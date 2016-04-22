@@ -107,3 +107,6 @@ HIST_STAMPS="dd/mm/yyyy"
 plugins=(autojump aws bower brew chucknorris composer common-aliases docker encode64 git gitfast git-extras git-flow github gulp osx symfony2)
 
 source $ZSH/oh-my-zsh.sh
+
+## Chuck Norris quotes FTW!
+chuck_cow
