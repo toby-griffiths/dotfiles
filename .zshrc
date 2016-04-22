@@ -37,6 +37,18 @@ then
     source ~/.zsh_aliases
 fi
 
+## Secure tokens, etc (not commited to repo)
+if [ -f ~/.secure_exports ]
+then
+    source ~/.secure_exports
+fi
+
+## Digital Ocean defaults
+if [ -f ~/.digital_ocean ]
+then
+    source ~/.digital_ocean
+fi
+
 ###
 # Stuff added by Oh-my-zsh insstall script
 ###
