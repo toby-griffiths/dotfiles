@@ -110,3 +110,6 @@ source $ZSH/oh-my-zsh.sh
 
 ## Chuck Norris quotes FTW!
 chuck_cow
+
+## iTerm2 Shell integrations
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
