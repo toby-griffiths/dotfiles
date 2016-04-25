@@ -32,6 +32,8 @@ alias cddot="cd $HOME/Dropbox/Development/GitHub/dotfiles"
 alias cdmacsetup="cd $HOME/src/github.com/toby-griffiths/mac-dev-playbook"
 alias ansible-latest="source ~/src/github.com/ansible/ansible/hacking/env-setup > /dev/null"
 
+## Composer
+alias composer="php -d memory_limit=-1 `which composer`"
 
 
 ## Xdebug
