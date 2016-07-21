@@ -42,6 +42,11 @@ alias s="app/console"
 alias cddot="cd $HOME/Dropbox/Development/GitHub/dotfiles"
 
 
+## Files
+function mkcd() {
+  mkdir -p "$@" && cd "$@";
+}
+
 
 ## Mac setup (absible)
 
@@ -54,5 +59,29 @@ alias composer="php -d memory_limit=-1 `which composer`"
 
 ## Xdebug
 
-alias xden="export XDEBUG_CONFIG=\"idekey=phpstorm\" ; pushd /usr/local/etc/php/5.6/conf.d > /dev/null ; if [ -f ext-xdebug.ini.disabled ] ; then ;  mv ext-xdebug.ini.disabled ext-xdebug.ini ; fi ; popd > /dev/null"
-alias xddis="unset XDEBUG_CONFIG ; pushd /usr/local/etc/php/5.6/conf.d > /dev/null ; if [ -f ext-xdebug.ini ] ; then ; mv ext-xdebug.ini ext-xdebug.ini.disabled ; fi ; popd > /dev/null"
+xden() {
+    export XDEBUG_CONFIG=\"idekey=phpstorm\"
+    pushd /usr/local/etc/php/5.6/conf.d > /dev/null
+    if [ -f ext-xdebug.ini.disabled ] ; then
+        mv ext-xdebug.ini.disabled ext-xdebug.ini
+    fi
+    pushd /usr/local/etc/php/5.5/conf.d > /dev/null
+    if [ -f ext-xdebug.ini.disabled ] ; then
+        mv ext-xdebug.ini.disabled ext-xdebug.ini
+    fi
+    popd > /dev/null
+    popd > /dev/null
+}
+xddis() {
+    unset XDEBUG_CONFIG
+    pushd /usr/local/etc/php/5.6/conf.d > /dev/null
+    if [ -f ext-xdebug.ini ] ; then
+        mv ext-xdebug.ini ext-xdebug.ini.disabled
+    fi
+    pushd /usr/local/etc/php/5.5/conf.d > /dev/null
+    if [ -f ext-xdebug.ini ] ; then
+        mv ext-xdebug.ini ext-xdebug.ini.disabled
+    fi
+    popd > /dev/null
+    popd > /dev/null
+}
