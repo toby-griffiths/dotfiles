@@ -5,13 +5,14 @@ protocol = https
 [core]
 	excludesfile = ~/.gitignore
 	autocrlf = input
+	editor = /usr/bin/vim
 [user]
 	name = Toby Griffiths
 	email = toby@cubicmushroom.co.uk
 [push]
 	default = simple
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	cmd = " "
 	path = 
 [mergetool "sourcetree"]
 	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.2.2/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
@@ -20,3 +21,5 @@ protocol = https
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[init]
+	templatedir = ~/.git_template
