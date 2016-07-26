@@ -1,0 +1,4 @@
+# Composer aliases
+
+## Run composer without memory limits
+alias composer="php -d memory_limit=-1 `which composer`"

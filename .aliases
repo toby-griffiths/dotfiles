@@ -2,86 +2,19 @@
 # This file contains command aliases common to all shells
 ###
 
-## Vagrant
-
-function intoVagrant {
-    if [ -d "vagrant" ]
-    then
-        pushd vagrant
-        INTO_VAGRANT=1
-    fi
-
-    vagrant $1
-
-    if [ "$INTO_VAGRANT" = "1" ]
-    then
-        popd
-        unset INTO_VAGRANT
-    fi
-}
-
-alias vup="intoVagrant up"
-alias vprov="intoVagrant provision"
-alias vreload="intoVagrant reload"
-alias vssh="intoVagrant ssh"
-alias vhalt="intoVagrant halt"
-alias vkill="intoVagrant destroy"
-alias vdest="intoVagrant destroy"
-alias vdestroy="intoVagrant destroy"
-
-
-
-## Symfony
-
-alias s="app/console"
-
-
-
-## dotfileso
-
-alias cddot="cd $HOME/Dropbox/Development/GitHub/dotfiles"
-
-
 ## Files
 function mkcd() {
   mkdir -p "$@" && cd "$@";
 }
-
 
 ## Mac setup (absible)
 
 alias cdmacsetup="cd $HOME/src/github.com/toby-griffiths/mac-dev-playbook"
 alias ansible-latest="source ~/src/github.com/ansible/ansible/hacking/env-setup > /dev/null"
 
-## Composer
-alias composer="php -d memory_limit=-1 `which composer`"
-
-
-## Xdebug
-
-xden() {
-    export XDEBUG_CONFIG=\"idekey=phpstorm\"
-    pushd /usr/local/etc/php/5.6/conf.d > /dev/null
-    if [ -f ext-xdebug.ini.disabled ] ; then
-        mv ext-xdebug.ini.disabled ext-xdebug.ini
-    fi
-    pushd /usr/local/etc/php/5.5/conf.d > /dev/null
-    if [ -f ext-xdebug.ini.disabled ] ; then
-        mv ext-xdebug.ini.disabled ext-xdebug.ini
-    fi
-    popd > /dev/null
-    popd > /dev/null
-}
-xddis() {
-    unset XDEBUG_CONFIG
-    pushd /usr/local/etc/php/5.6/conf.d > /dev/null
-    if [ -f ext-xdebug.ini ] ; then
-        mv ext-xdebug.ini ext-xdebug.ini.disabled
-    fi
-    pushd /usr/local/etc/php/5.5/conf.d > /dev/null
-    if [ -f ext-xdebug.ini ] ; then
-        mv ext-xdebug.ini ext-xdebug.ini.disabled
-    fi
-    popd > /dev/null
-    popd > /dev/null
-}
+# Include all files in .aliases directory
+for FILE in $( find ~/.aliases.d/* -type f -print | sort )
+do
+    echo "Including $FILE"
+    source $FILE
+done
