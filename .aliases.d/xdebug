@@ -2,6 +2,10 @@
 
 xden() {
     export XDEBUG_CONFIG=\"idekey=phpstorm\"
+    pushd /usr/local/etc/php/7.0/conf.d > /dev/null
+    if [ -f ext-xdebug.ini.disabled ] ; then
+      mv ext-xdebug.ini.disabled ext-xdebug.ini
+    fi
     pushd /usr/local/etc/php/5.6/conf.d > /dev/null
     if [ -f ext-xdebug.ini.disabled ] ; then
         mv ext-xdebug.ini.disabled ext-xdebug.ini
@@ -10,11 +14,16 @@ xden() {
     if [ -f ext-xdebug.ini.disabled ] ; then
         mv ext-xdebug.ini.disabled ext-xdebug.ini
     fi
+    popd > /dev/null
     popd > /dev/null
     popd > /dev/null
 }
 xddis() {
     unset XDEBUG_CONFIG
+    pushd /usr/local/etc/php/7.0/conf.d > /dev/null
+    if [ -f ext-xdebug.ini ] ; then
+      mv ext-xdebug.ini ext-xdebug.ini.disabled
+    fi
     pushd /usr/local/etc/php/5.6/conf.d > /dev/null
     if [ -f ext-xdebug.ini ] ; then
         mv ext-xdebug.ini ext-xdebug.ini.disabled
@@ -23,6 +32,7 @@ xddis() {
     if [ -f ext-xdebug.ini ] ; then
         mv ext-xdebug.ini ext-xdebug.ini.disabled
     fi
+    popd > /dev/null
     popd > /dev/null
     popd > /dev/null
 }
