@@ -15,6 +15,5 @@ alias ansible-latest="source ~/src/github.com/ansible/ansible/hacking/env-setup 
 # Include all files in .aliases directory
 for FILE in $( find ~/.aliases.d/* -type f -print | sort )
 do
-    echo "Including $FILE"
     source $FILE
 done
