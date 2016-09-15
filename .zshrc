@@ -44,6 +44,7 @@ done
 ## Secure tokens, etc (not commited to repo)
 if [ -f ~/.secure_exports ]
 then
+    echo "Loading secure exports from ~/.secure_exports"
     source ~/.secure_exports
 fi
 
