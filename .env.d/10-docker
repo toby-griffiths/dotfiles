@@ -1,5 +1,6 @@
 export DOCKER_ID_USER="tobygr"
 export DOCKERCLOUD_USER="tobygr"
+export DOCKERCLOUD_NAMESPACE="cubicmushroom"
 
 # Don't forget to set your p/w in ~/.secure_exports
 # Don't forget to set your p/w in ~/.secure_exports
