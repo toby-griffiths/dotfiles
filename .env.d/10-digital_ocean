@@ -6,4 +6,9 @@ export DIGITALOCEAN_REGION=lon1
 export DIGITALOCEAN_SIZE=512mb
 export DIGITALOCEAN_SSH_KEY_FINGERPRINT=1e:b2:9a:a8:84:0d:38:a4:3d:cf:36:f4:45:26:3e:0f
 
-export DIGITALOCEAN_ACCESS_TOKEN="SET ME IN ~/.secure_exports"
+if [[ "$DIGITALOCEAN_ACCESS_TOKEN" == "" ]] ;
+then
+  echo "You need to add 'export DIGITALOCEAN_ACCESS_TOKEN=\"<your token>\"' in your ~/.secure_exports file"
+else
+  export DO_API_TOKEN="$DIGITALOCEAN_ACCESS_TOKEN"
+fi  
