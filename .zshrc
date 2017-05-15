@@ -65,5 +65,9 @@ chuck_cow
 ## iTerm2 Shell integrations
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+## SSH Agent
+eval `ssh-agent`
+ssh-add -K
+
 # Select a tmux session
 sh -c ". ~/.tmux_session_select.sh"
