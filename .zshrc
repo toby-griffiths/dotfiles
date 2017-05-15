@@ -20,12 +20,10 @@ HISTFILE=~/.zsh_history
 # To ignore duplicate lines in the history, use the following:
 setopt HIST_IGNORE_DUPS
 
-
 ## Key bindings
 
 # File manager key binds (as https://wiki.archlinux.org/index.php/Zsh#File_manager_key_binds)
 # Read up more on this, as not working
-
 
 ## Aliases
 if [ -f ~/.zsh_aliases ]
@@ -34,19 +32,19 @@ then
 fi
 
 
-# Include all files in .aliases directory
-for FILE in $( find ~/.env.d/* -type f -print | sort )
-do
-    source $FILE
-done
-
-
-## Secure tokens, etc (not commited to repo)
+# Secure tokens, etc (not commited to repo)
 if [ -f ~/.secure_exports ]
 then
     echo "Loading secure exports from ~/.secure_exports"
     source ~/.secure_exports
 fi
+
+
+# Include all files in .aliases directory
+for FILE in $( find ~/.env.d/* -type f -print | sort )
+do
+    source $FILE
+done
 
 
 ###
