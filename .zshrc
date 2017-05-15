@@ -55,7 +55,7 @@ done
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump aws bower brew chucknorris composer common-aliases docker encode64 git gitfast git-extras git-flow git-flow-avh git-flow-completion github gulp osx symfony2)
+plugins=(autojump aws bower brew chucknorris composer common-aliases docker encode64 git gitfast git-extras git-flow git-flow-avh git-flow-completion github gulp osx symfony2 zsh-completions)
 
 source $ZSH/oh-my-zsh.sh
 
