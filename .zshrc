@@ -10,6 +10,9 @@ fpath=(/usr/local/share/zsh-completions /usr/local/share/zsh/site-functions $fpa
 autoload -U compinit promptinit
 compinit -u
 promptinit
+# For some reason the brew completion file for kubectl isn't working, so we'll just put this here
+echo "Run \`source <(kubectl completion zsh)\` to add kubectl completion"
+
 # This will set the default prompt to the walters theme
 prompt walters
 
