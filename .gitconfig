@@ -23,3 +23,5 @@ protocol = https
 	required = true
 [init]
 	templatedir = ~/.git_template
+[commit]
+	template = /Users/toby/.stCommitMsg
