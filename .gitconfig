@@ -5,7 +5,7 @@ protocol = https
 [core]
 	excludesfile = ~/.gitignore
 	autocrlf = input
-	editor = /usr/bin/vim
+	editor = /usr/local/bin/vim
 [user]
 	name = Toby Griffiths
 	email = toby@cubicmushroom.co.uk
