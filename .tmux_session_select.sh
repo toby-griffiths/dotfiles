@@ -1,5 +1,10 @@
 #!/usr/bin/env zsh
 
+if [ -n "$TMUX" ]
+then
+  exit;
+fi
+
 # Get tmux sessions and add option for a new one
 TMUX_SESSIONS="$(tmux list-sessions -F "#S") \
 new";
