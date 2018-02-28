@@ -5,4 +5,4 @@
 alias composer=""
 unalias composer
 ## Run composer without memory limits
-alias composer="php -d memory_limit=-1 `which composer`"
+alias composer="php -d memory_limit=-1 -d xdebug.remote_autostart=0 `which composer`"
