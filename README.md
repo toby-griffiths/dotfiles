@@ -1,21 +1,26 @@
 Toby's Dotfiles
 ===============
 
-Helper scripts
---------------
+Commands
+--------
 
-The folowing helper scripts are provided…
+All commands are run through the `./do` command.
 
-### bin/setup.sh
+Running `./do` on it's own will list all the available commands.
+
+Below are details of the commands available...
+
+### setup
 
 Arguments: none
 
-Symlinks all the dotfiles to the user's home directory
+Symlinks all the dotfiles to the user's home directory.
 
 
-### bin/add_dotfile.sh
+### file:add
 
-Arguments: $file
+Arguments…
+
+* filename
 
 1. Moves a dotfile to the dotfiles repository, and adds a symlink in it's place
-1. Adds the file the bin/setup.sh file to deploy on setup
