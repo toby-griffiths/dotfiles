@@ -24,3 +24,14 @@ Arguments…
 * filename
 
 1. Moves a dotfile to the dotfiles repository, and adds a symlink in it's place
+
+
+
+
+Roadmap
+-------
+
+1. Update setup script to install…
+
+    * vim-obsession
+    * vim-sensible 
