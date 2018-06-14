@@ -10,17 +10,22 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\CommandLoader\FactoryCommandLoader;
-use TobyGriffiths\DotFiles\Command\SetupCommand;
+use TobyGriffiths\DotFiles\Command as Commands;
 
 const PROJECT_NAMESPACE = 'TobyGriffiths';
 
 /** @var Application $application */
 $application = new Application();
 
+$filesDir = __DIR__ . '/files';
+
 $application->setCommandLoader(new FactoryCommandLoader([
-    SetupCommand::NAME => function () {
-        return new SetupCommand(SetupCommand::NAME, __DIR__ . '/files');
-    }
+    Commands\SetupCommand::NAME => function () use ($filesDir) {
+        return new Commands\SetupCommand(Commands\SetupCommand::NAME, $filesDir);
+    },
+    Commands\AddFileCommand::NAME => function () use ($filesDir) {
+        return new Commands\AddFileCommand(Commands\AddFileCommand::NAME, $filesDir);
+    },
 ]));
 
 
