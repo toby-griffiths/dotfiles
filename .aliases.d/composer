@@ -1,8 +1,0 @@
-# Composer aliases
-
-## As thsi could be run multiple times, we need to clear any existing composer aliases first...
-## but we need to make sure there's a composer alias before we remove the old one
-alias composer=""
-unalias composer
-## Run composer without memory limits
-alias composer="php -d memory_limit=-1 `which composer`"

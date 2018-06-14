@@ -1,2 +1,0 @@
-# Don't display using cowsays
-export ANSIBLE_NOCOWS=true
