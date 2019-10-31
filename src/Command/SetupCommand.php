@@ -26,6 +26,7 @@ class SetupCommand extends Command
      */
     private $filesDir;
 
+
     /**
      * SetupCommand constructor.
      *
@@ -135,6 +136,7 @@ class SetupCommand extends Command
         return 0;
     }
 
+
     /**
      * @param OutputInterface $output
      * @param string $errorMessage
@@ -143,6 +145,7 @@ class SetupCommand extends Command
     {
         $output->writeln(sprintf('<error>%s</error>', $errorMessage));
     }
+
 
     /**
      * @param OutputInterface $output
