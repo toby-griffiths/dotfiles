@@ -1,5 +1,0 @@
-# API calls
-
-function doapi() {
-  curl -X $1 -H "Authorization: Bearer $DIGITALOCEAN_ACCESS_TOKEN" "https://api.digitalocean.com/v2/$2$3"
-}
