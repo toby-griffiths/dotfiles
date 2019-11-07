@@ -1,0 +1,7 @@
+#!/bin/bash
+
+PROFILE="${AWS_PROFILE:-${AWS_DEFAULT_PROFILE:-ro}}"
+
+(>&2 echo "Executing aws command using '${PROFILE}' profile.")
+
+exec /usr/local/bin/aws-vault exec "${PROFILE}" -- /usr/local/bin/aws "$@"
